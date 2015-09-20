@@ -78,7 +78,10 @@ body {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-
+p.tinytext {
+	font-size:9px;
+	text-align:center;
+}
 /* /flat buttons */
 
 /* navbar */
