@@ -216,5 +216,7 @@ a:active {
 div.uploadButton {
 	font-family:'Lato', Calibri, sans-serif;
 }
-#pictureHolder {
+li.robolist {
+	margin-top:10px;
+	font-size:4vw;
 }

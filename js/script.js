@@ -19,9 +19,19 @@ function init(){
 	    	var obj = results[i];
 	    	var image = obj.get("file");
 			var url = image.url();
+			var filter= obj.get("filter");
 			//alert(url);
 
-	      $("#grid").html("<li><img src=\"" + url + "\"></a></li>" + $("#grid").html());
+			// this will apply filters based on the data in the database
+			if(filter == "blackwhite") {
+	      		$("#grid").html("<li><img style=\"filter:grayscale(1);-webkit-filter: grayscale(1);\"  src=\"" + url + "\"></a></li>" + $("#grid").html());
+			}
+			else if(filter =="sepia"){
+				$("#grid").html("<li><img style=\"filter:sepia(1);-webkit-filter: sepia(1);\"  src=\"" + url + "\"></a></li>" + $("#grid").html());
+			}
+			else {
+				$("#grid").html("<li><img src=\"" + url + "\"></a></li>" + $("#grid").html());
+			}
 
 	      new AnimOnScroll( document.getElementById( 'grid' ), {
 				minDuration : 0.4,
@@ -53,8 +63,16 @@ function submit(){
 
 		});
 
+
+
 		var Picture = Parse.Object.extend("Picture");
 		var picture = new Picture();
+
+		// FILTER CODE
+		var e = document.getElementById("myFilter");
+		var filter = e.options[e.selectedIndex].value;
+		picture.set("filter", filter);
+		// END FILTER CODE
 
 		picture.set("file", parseFile);
 		picture.set("use", true);
@@ -71,6 +89,16 @@ function submit(){
 				//alert('Failed to create new object, with error code: ' + error.message);
 			}
 		});
+
+		// FILTER FUNCTION CODE
+
+
+		// will get filter if all goes well
+
+
+
+		// END OF FILTER FUNCTION CODE
+
 
 		
 	}

@@ -26,12 +26,14 @@
 
 			<br />
 
+
+
 			 <form>
 
 			 	<div class="uploadButton" style="pointer-events:none;z-index:10;margin-bottom:-60px;" >
 			 		<input class="peter-river-flat-button" value="Upload file"></input>
 			 	</div>
-			 	<input type="file" id="pictureHolder" name="pic" style="z-index:999;opacity:0;" />
+			 	<input type="file" id="pictureHolder" name="pic" style="z-index:9;opacity:0;" />
 
 			 	<p class="tinytext"> First, click this button to choose an image file / dank meme. </p>
 
@@ -40,8 +42,24 @@
 
 			 <br />
 
+			 <!-- The filter selector dropdown -->
+			 <select id="myFilter" style="text-indent:20px;font-size:12px;"  class="peter-river-flat-button">
+			 	<option value="nofilter">#noFilter</option>
+			 	<option value="blackwhite">Black &amp; White</option>
+			 	<option value="sepia">Sepia</option>
+			 </select>
+
+			 <p class="tinytext"> Now, choose a filter for your picture. (or go with #nofilter) </p> <br />
+
+			 
+
 			 <button onClick="submit()" class="peter-river-flat-button">Submit</button>
 			 <p class="tinytext"> Click this button to upload your meme. </p>
+
+
+			 
+			 
+
 			
 				<ul class="grid effect-1" id="grid">
 					
