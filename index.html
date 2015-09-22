@@ -1,3 +1,18 @@
+<!--
+	THIS IS A WEB APP.
+	Web apps are made up of THREE main elements (there are a few more, but here we will be using what are referred to as the 'big three')
+
+	1) HTML - The Skeleton of the page, this is where all the text is typed and the images are inserted. Using only html, you can 'hardcode' the elements in a website. This is useful for putting simple, unformatted text and images on the web.
+
+	2) CSS - The Styling of the page, This will be where all the colors and the fonts will be added. In the CSS of a page (usually in a separate file) the styles of all the elements will be be stored.
+
+
+<!--If you are still confused, here's how Mitesh simplifies it...
+	Think of web development like Ice cream :
+	Ice cream's Physical Appeareance (Shape): Is just like HTML (Hypertext Markup Language)
+	Icecream's Physical Attributes: Lke Color, Texture, Design, is just like CSS (Cascading Style Sheet)
+	Icecream's Toppings, side orders, and how you will react to this ice cream is just like Javascript (JS) -->
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 	<head>
@@ -5,6 +20,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<title>TinoTiles</title>
+		<!-- Line 12: We give our project a title every time we begin a project, this Text is displayed on the tab bar and is generally the name of your application. Be creative! -->
 
 		<script type="text/javascript" src="js/jquery.js"></script>
 		<script src="http://www.parsecdn.com/js/parse-1.6.2.min.js"></script>
@@ -14,9 +30,16 @@
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<script src="js/modernizr.custom.js"></script>
 
+		<!-- Lines 15-21: We often use different resources to help our applications function better. But how do we get them to work in our project? First we must link them to our project. It is important to link files you want to use in your project otherwise, the functions you are looking for in these files, won't be implemented! Commonly used libraries (aka Resources) usually end up being JS and CSS files.
+
+
+		TL;DR - To add functionality and ability to our web applications, we will usually include various Script (JavaScript) and CSS (Stylesheet) files, the former helps us add user interactivity while the latter allows us to change the look of our app extensively.
+		  -->
+
 		
 
 	</head>
+
 	<body>
 		<div class="navbar">
 			<img src="img/logo-white.png" class="brand" />
@@ -30,12 +53,20 @@
 
 			 <form>
 
+			 	<!-- Line 55: When we want submit an image in the project we definitely want the user's input! However we must enable the user to do so.
+				
+				In this case, we have applied a 'css fix' to the button, placing a nicer looking button over the default file upload button in HTML, which is otherwise hard to style without JavaScript usage.
+			 	 -->
+
 			 	<div class="uploadButton" style="pointer-events:none;z-index:10;margin-bottom:-60px;" >
 			 		<input class="peter-river-flat-button" value="Upload file"></input>
 			 	</div>
+
 			 	<input type="file" id="pictureHolder" name="pic" style="z-index:9;opacity:0;" />
 
 			 	<p class="tinytext"> First, click this button to choose an image file / dank meme. </p>
+
+			 	<!-- End of Upload Image button -->
 
 			 
 			 </form>
@@ -52,7 +83,7 @@
 			 <p class="tinytext"> Now, choose a filter for your picture. (or go with #nofilter) </p> <br />
 
 			 
-
+			 <!-- Here, we have included JavaScript based interactivity. By adding the function submit() to the html button, we have effectively created a button that submits the image. -->
 			 <button onClick="submit()" class="peter-river-flat-button">Submit</button>
 			 <p class="tinytext"> Click this button to upload your meme. </p>
 
@@ -74,8 +105,9 @@
 		<script src="js/imagesloaded.js"></script>
 		<script src="js/classie.js"></script>
 		<script src="js/AnimOnScroll.js"></script>
-		<script>
 
+		<script>
+		// Javascript can also be written directly within the document itself. This is called 'inline' Javascript, and is usually only used for the purpose of clarity and readability of a document. (Having inline JS is generally frowned upon as a convention.) Whenever in doubt, simply include another "nameOfScript.js" file with your script in it to include that code.
 			
 		</script>
 	</body>

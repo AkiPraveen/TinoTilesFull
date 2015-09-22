@@ -1,3 +1,4 @@
+// the following is a parse initialization
 $(document).ready(function(){
 	Parse.initialize("MFgxDOAeaC1MGx5YNgRyDtfBkJLOfNowfIFAKEwf", "4cmF2z7jyMoUsKmSK7cxpxeNptMbqPQ2bqzKFzLb");
 
