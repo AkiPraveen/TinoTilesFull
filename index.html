@@ -35,6 +35,23 @@
 
 		TL;DR - To add functionality and ability to our web applications, we will usually include various Script (JavaScript) and CSS (Stylesheet) files, the former helps us add user interactivity while the latter allows us to change the look of our app extensively.
 		  -->
+		  
+		
+		<!--Example of inline Javascript. This is generally discouraged but allows a developer to quickly add javascript to their websites. -->
+
+		<script>
+		$(document).ready(function(){
+			$( "input:file" ).change(function() {
+				var filename = $('input[type=file]').val().split('\\').pop();
+				//alert(filename);
+				$( '#congrats').text("Congrats you uploaded: "+filename);
+				$( "#congrats" ).hide();
+				$( "#congrats" ).slideDown( "slow" );
+				
+
+			});
+		});
+		</script>
 
 		
 
@@ -70,6 +87,8 @@
 
 			 
 			 </form>
+			 
+			 <center><p id="congrats" style="display:none;"> Congrats you uploaded: </p></center>
 
 			 <br />
 
