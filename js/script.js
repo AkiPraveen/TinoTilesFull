@@ -69,11 +69,6 @@ function submit(){
 		var Picture = Parse.Object.extend("Picture");
 		var picture = new Picture();
 
-		// FILTER CODE
-		var e = document.getElementById("myFilter");
-		var filter = e.options[e.selectedIndex].value;
-		picture.set("filter", filter);
-		// END FILTER CODE
 
 		picture.set("file", parseFile);
 		picture.set("use", true);
